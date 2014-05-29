@@ -1,0 +1,8 @@
+<?php
+
+// hook_form_alter
+function staff_profile_form_alter(&$form, &$form_state, $form_id) {
+	if($form_id == 'staff_profile_node_form') {
+		drupal_add_css(drupal_get_path('module', 'staff_profile'). '/css/staff_profile.css');	
+	}
+}
